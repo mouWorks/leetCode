@@ -52,19 +52,19 @@ class Solution
      */
     public function reverseInt($n)
     {
-
         $boolFlip = $n > 0 ? false : true;
 
         if($boolFlip){
-            $n = $n* -1;
+            $n = $n * -1;
         }
 
         $reverse = 0;
         while ($n > 0)
         {
-            $reverse = $reverse * 10;
-            $reverse = $reverse + $n % 10;
-            $n = (int)($n/10);
+            $reverse = $reverse * 10; //之前的尾數 * 10;
+            $reverse += $n % 10; //取尾數
+
+            $n = intval($n / 10);
         }
 
         if($reverse > 2147483647){
