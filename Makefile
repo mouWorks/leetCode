@@ -11,10 +11,10 @@ test:
 	@echo ">>> Run All the test under [LeetCode]"
 	./phpunit7.phar LeetCode --exclude-group ignore --testdox
 
-push:
+pull:
 	@echo ">>> Pull Code on Current branch [$(BRANCH)]"
 	git pull origin $(BRANCH) --rebase
 
-pull:
+push:
 	@echo ">>> Current branch [$(BRANCH)] Pushing Code"
 	git push origin $(BRANCH)
