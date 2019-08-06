@@ -1,14 +1,15 @@
 #!/usr/bin/make -f
 BRANCH := $(shell git name-rev --name-only HEAD)
 
-build: update-d
+all: build test
 
-update-d:
-	composer install
+build:
+	wget -O phpunit7.phar https://phar.phpunit.de/phpunit-7.phar
+	chmod +x phpunit7.phar
 
 test:
 	@echo ">>> Run All the test under [LeetCode]"
-	vendor/bin/phpunit LeetCode --exclude-group ignore --testdox
+	./phpunit7.phar LeetCode --exclude-group ignore --testdox
 
 push:
 	@echo ">>> Pull Code on Current branch [$(BRANCH)]"
