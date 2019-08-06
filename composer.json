@@ -1,0 +1,12 @@
+{
+    "name": "moupunk/leet-code",
+    "authors": [
+        {
+            "name": "Mou",
+            "email": "mou.wang@g.ncu.edu.tw"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.3"
+    }
+}
