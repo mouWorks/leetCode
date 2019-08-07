@@ -1,9 +1,9 @@
 <?php
-namespace LeetCode\Q14;
+namespace LeetCode\Q38;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Q14. Longest Common Prefix
+ * Q38. Longest Common Prefix
  *
  * 1. 先排除負數
  * 2. <10 的必定為 (如 7 == 7)
@@ -11,11 +11,11 @@ use PHPUnit\Framework\TestCase;
  * 4. 最後再用一個 loop 去比對
  *
  *
- * Class Q14_Palindrome_Number
- * @package LeetCode\Q14
+ * Class Q38_Palindrome_Number
+ * @package LeetCode\Q38
  *
  */
-class Q14_LongestCommonPrefixTest extends TestCase
+class Q38_CountAndSay extends TestCase
 {
     /**
      * @var Solution
@@ -30,21 +30,21 @@ class Q14_LongestCommonPrefixTest extends TestCase
     public function test_1_3()
     {
         $input = ['flower', 'flow', 'flight'];
-        $response = $this->solution->getLongestCommonPrefix($input);
+        $response = $this->solution->countAndSay($input);
         $this->assertEquals('fl', $response);
     }
 
     public function test_2_4()
     {
         $input = ['dog','racecar','car'];
-        $response = $this->solution->getLongestCommonPrefix($input);
+        $response = $this->solution->countAndSay($input);
         $this->assertEquals('', $response);
     }
 
 //    public function test_3_9()
 //    {
 //        $int = "IX";
-//        $response = $this->solution->getLongestCommonPrefix($int);
+//        $response = $this->solution->countAndSay($int);
 //        $this->assertEquals(9, $response);
 //    }
 
@@ -56,7 +56,7 @@ class Solution
      * @param String $s
      * @return Integer
      */
-    public function getLongestCommonPrefix($s)
+    public function countAndSay($s)
     {
         $result = '';
 //        $itemCount = count($s);
