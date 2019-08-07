@@ -1,5 +1,5 @@
 <?php
-namespace LeetCode\Q7;
+namespace LeetCode\Q9;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  * @package LeetCode\Q7
  *
  */
-class Q9_Palindrome_Number extends TestCase
+class Q9_Palindrome_NumberTest extends TestCase
 {
     /**
      * @var Solution

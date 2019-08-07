@@ -2,7 +2,7 @@
 namespace LeetCode\Q7;
 use PHPUnit\Framework\TestCase;
 
-class Q7_ReverseInteger extends TestCase
+class Q7_ReverseIntegerTest extends TestCase
 {
     /**
      * @var Solution
