@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  *
  * Class Q9_Palindrome_Number
- * @package LeetCode\Q7
+ * @package LeetCode\Q9
  *
  */
 class Q9_Palindrome_NumberTest extends TestCase

@@ -3,16 +3,15 @@ namespace LeetCode\Q13;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Q9: Palindrome Number (正反讀都一樣的數字)
+ * Q13. 羅馬數字計算
  *
- * 1. 先排除負數
- * 2. <10 的必定為 (如 7 == 7)
- * 3. 餘數為零必不為
- * 4. 最後再用一個 loop 去比對
+ * 1. 由最右邊 Loop 走回來
+ * 2. 當下的值, 和前一個值相比
+ *    a. 當下的值比前一個小 -> 則 加上一個負數
+ *    b. 當下的值比前一個大 -> 則 加上一個正數
  *
- *
- * Class Q9_Palindrome_Number
- * @package LeetCode\Q7
+ * Class Q13_RomanToIntegerTest
+ * @package LeetCode\Q13
  *
  */
 class Q13_RomanToIntegerTest extends TestCase
@@ -61,14 +60,6 @@ class Q13_RomanToIntegerTest extends TestCase
         $response = $this->solution->romanToInt($int);
         $this->assertEquals(1994, $response);
     }
-
-//    public function test_5_11為True()
-//    {
-//        $int = 11;
-//        $response = $this->solution->romanToInt($int);
-//        $this->assertEquals(true, $response);
-//    }
-
 }
 
 class Solution
