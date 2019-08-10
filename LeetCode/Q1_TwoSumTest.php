@@ -47,10 +47,7 @@ class Solution
      */
     public function twoSum($nums, $target)
     {
-        $resultArray = [];
-
         $size = count($nums);
-
         for($i=0;$i<$size;$i++){
 
             for($j=0; $j<$size; $j++){
@@ -58,13 +55,10 @@ class Solution
                     $sum = $nums[$i] + $nums[$j];
 
                     if($sum == $target){
-
-                        array_push($resultArray, $i);
+                        return [$i, $j];
                     }
                 }
             }
         }
-
-        return $resultArray;
     }
 }
