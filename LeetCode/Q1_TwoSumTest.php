@@ -48,15 +48,14 @@ class Solution
     public function twoSum($nums, $target)
     {
         $size = count($nums);
+
         for($i=0;$i<$size;$i++){
 
-            for($j=0; $j<$size; $j++){
-                if($i != $j){
-                    $sum = $nums[$i] + $nums[$j];
+            $result = $target - $nums[$i];
+            for($j=$i+1; $j<$size; $j++){
 
-                    if($sum == $target){
-                        return [$i, $j];
-                    }
+                if($nums[$j] == $result){
+                    return [$i, $j];
                 }
             }
         }
