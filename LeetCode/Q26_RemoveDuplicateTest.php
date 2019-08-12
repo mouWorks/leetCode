@@ -21,20 +21,6 @@ class Q26_RemoveDuplicateTest extends TestCase
         $this->solution = new Solution();
     }
 
-    public function test_1_3()
-    {
-        $input = [1,1,2];
-        $this->solution->removeDuplicate($input);
-        $this->assertEquals([1,2], $input);
-    }
-
-    public function test_2_4()
-    {
-        $input = [1,2,3,2,1,4,5];
-        $this->solution->removeDuplicate($input);
-        $this->assertEquals([1,2,3,4,5], $input);
-    }
-
     public function testSample1()
     {
         $array = [1,1,2];
@@ -50,6 +36,12 @@ class Q26_RemoveDuplicateTest extends TestCase
         $this->assertArraySubset([0,1,2,3,4], $array);
     }
 
+    public function testSample3()
+    {
+        $input = [1,2,3,2,1,4,5];
+        $this->solution->removeDuplicate($input);
+        $this->assertEquals([1,2,3,4,5], $input);
+    }
 }
 
 class Solution

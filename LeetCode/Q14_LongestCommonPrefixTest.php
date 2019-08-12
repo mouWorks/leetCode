@@ -5,10 +5,6 @@ use PHPUnit\Framework\TestCase;
 /**
  * Q14. Longest Common Prefix
  *
- * 1. 先排除負數
- * 2. <10 的必定為 (如 7 == 7)
- * 3. 餘數為零必不為
- * 4. 最後再用一個 loop 去比對
  *
  *
  * Class Q14_Palindrome_Number
@@ -47,7 +43,6 @@ class Q14_LongestCommonPrefixTest extends TestCase
 //        $response = $this->solution->getLongestCommonPrefix($int);
 //        $this->assertEquals(9, $response);
 //    }
-
 }
 
 class Solution
@@ -56,38 +51,8 @@ class Solution
      * @param String $s
      * @return Integer
      */
-    public function getLongestCommonPrefix($s)
+    public function getLongestCommonPrefix($strs)
     {
-        $result = '';
-//        $itemCount = count($s);
-        for($i=0; $i < 999999; $i++){
-
-            $target = '';
-
-            foreach($s as $key => $value){
-
-                if($key == 0){
-                    $target = $value[$i];
-                }
-
-                if($value[$i] != $target){
-                    continue;
-                }
-
-                $result .= $target;
-
-                if(empty($target)){
-                    break;
-                }
-            }
-
-
-
-
-        }
-
-        return $result;
-
 
     }
 }
