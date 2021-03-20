@@ -1,4 +1,4 @@
-# leetCode
+leetCode
 ===
 #### Practice LeetCode w/PHPUnit
 
@@ -6,3 +6,5 @@
 1. `git clone`
 2. `make build` - getting ready .phar for UnitTest
 3. `make test` - run passed tests.
+
+* Q1 - TwoSum
